@@ -1,13 +1,17 @@
 const canvas = document.querySelector("#canvas");
+const red = document.querySelector('#red');
+const blue = document.querySelector('#blue');
+let color = 'yellow';
+drawCanvas(4);
+const btn = document.querySelector("#btn");
+
 canvas.addEventListener('mouseover', function(event){
     let target = event.target;
     if(target.classList.contains('pixel')){
-        target.classList.add('colored');
+        target.style.backgroundColor = color;
     }
     }
 )
-drawCanvas(4);
-const btn = document.querySelector("#btn");
 
 btn.addEventListener('click', function updateCanvas(){
     canvas.innerHTML = "";
@@ -15,6 +19,9 @@ btn.addEventListener('click', function updateCanvas(){
     drawCanvas(canvasSize);
 })
 
+red.addEventListener('click', () =>{
+    color = 'red';
+})
 
 
 function drawCanvas(size){
