@@ -10,15 +10,17 @@
 <body>
     <h1>Drawboard</h1>
     <div class="flex-container">
-        <div id="left flex-container">
+        <div id="left_flex_container">
             <h3>Choose your Color</h3>
             <div id="colors">
-                <div id="red"></div>
-                <div id="blue"></div>
+                <div id="black" class="color"></div>
+                <div id="red" class="color"></div>
+                <div id="blue" class="color"></div>
+                <div id="eraser" class="color"><img id="img" src="images/vecteezy_illustration-vector-graphic-of-eraser-icon-design_8773693.jpg" alt="eraser"></div>
             </div>
             <div id="colors"></div>
             <h3>Canvas size</h3>
-            <input id="size" type="number" max="10">
+            <input id="size" type="number" max="10" value="16">
             <button id="btn">Create Canvas</button>
         </div>
         <div id="canvas">
